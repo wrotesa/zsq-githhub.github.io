@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>吉林乡村旅游攻略</title>
+  <style>
+    /* 全局样式 */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f8ff;
+    }
+    
+    /* 头部样式 */
+    header {
+      background-color: #87ceeb;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+    
+    /* 主内容区域样式 */
+    main {
+      display: flex;
+      justify-content: space-around; /* 均匀分布内容 */
+      padding: 20px;
+    }
+    
+    section {
+      flex: 1;
+      background-color: #e0ffff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin: 10px;
+      padding: 20px;
+      border-radius: 10px; /* 添加圆角 */
+    }
+    
+    /* 图片样式 */
+    img {
+      max-width: 100%;
+      height: auto;
+      opacity: 0.8;
+      transition: opacity 0.3s ease;
+      border-radius: 10px; /* 添加圆角 */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 添加阴影 */
+      margin-bottom: 10px; /* 增加图片与文字间距 */
+    }
+    
+    img:hover {
+      opacity: 1;
+    }
+    
+    /* 文字样式 */
+    h2 {
+      margin-top: 0;
+    }
+    
+    p {
+      margin: 10px 0;
+    }
+    
+    /* 下拉菜单样式 */
+    select {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-top: 10px; /* 增加下拉菜单与上方内容的间距 */
+    }
+    
+    /* 底部样式 */
+    footer {
+      background-color: #87ceeb;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+    
+    /* Tooltip 样式（需要配合 JavaScript 实现） */
+    #tooltip {
+      position: absolute;
+      background-color: #333;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 5px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none; /* 避免 tooltip 阻挡鼠标事件 */
+      white-space: nowrap; /* 防止内容换行 */
+      z-index: 10; /* 确保 tooltip 显示在上方 */
+    }
+    
+    /* 响应式设计 */
+    @media (max-width: 768px) {
+      main {
+        flex-direction: column; /* 小屏幕下改为垂直布局 */
+      }
+      section {
+        margin: 10px 0; /* 垂直布局时调整间距 */
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>吉林乡村旅游攻略</h1>
+  </header>
+  <main>
+    <section>
+      <h2>红叶谷</h2>
+      <img src="img/hyg.jpg" alt="红叶谷图片">
+      <p>红叶谷是吉林著名的乡村景点，每到秋季，枫叶如火，美不胜收。</p>
+      <p>红叶谷最佳观赏时间通常在 9 月下旬到 10 月中旬。此时，整个山谷被五彩斑斓的枫叶所覆盖，仿佛一幅绚丽的画卷。</p>
+      <div id="tooltip">更多红叶谷信息</div>
+      <select>
+        <option>春季游览</option>
+        <option>夏季游览</option>
+        <option>秋季游览</option>
+        <option>冬季游览</option>
+      </select>
+      <ul>
+        <li>周边美食推荐：当地的农家菜，特别是山野菜和土鸡汤，味道鲜美。</li>
+        <li>住宿选择：有温馨的民宿和舒适的酒店可供选择。</li>
+      </ul>
+    </section>
+    <section>
+      <h2>向海</h2>
+      <img src="img/xh.jpg" alt="向海图片">
+      <p>这里有大片的湿地和珍稀鸟类，自然风光独特。</p>
+      <p>向海是国家级自然保护区，拥有丰富的生态资源。每年春季和秋季，是观鸟的最佳时节，能看到各种珍稀鸟类在此栖息繁衍。</p>
+      <div id="tooltip">更多向海信息</div>
+      <select>
+        <option>观鸟最佳时间</option>
+        <option>湿地游览路线</option>
+        <option>特色活动介绍</option>
+      </select>
+      <ul>
+        <li>特色活动：可以参加湿地徒步活动，亲近大自然。</li>
+        <li>购物推荐：当地的手工艺品，如芦苇编制品，具有独特的艺术价值。</li>
+      </ul>
+    </section>
+    <section>
+      <h2>查干湖</h2>
+      <img src="img/cgh.jpg" alt="查干湖图片">
+      <p>冬季的查干湖冬捕是一大特色，同时还能品尝到新鲜美味的湖鱼。</p>
+      <p>查干湖冬捕历史悠久，场面壮观。每年 12 月中旬到次年 1 月中旬，是冬捕的旺季。</p>
+      <div id="tooltip">更多查干湖信息</div>
+      <select>
+        <option>冬捕体验项目</option>
+        <option>湖鱼美食推荐</option>
+        <option>周边住宿选择</option>
+      </select>
+      <ul>
+        <li>交通指南：可以选择自驾或者乘坐公共交通工具前往。</li>
+        <li>注意事项：冬季气温较低，注意保暖和防滑。</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p>20220000602张诗棋</p>
+  </footer>
+</body>
+</html>

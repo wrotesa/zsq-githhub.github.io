@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>吉林滑雪场</title>
+		<style type="text/css">x
+		/*全局控制*/
+		body{ font-family:"微软雅黑";}
+		/*重置浏览器的默认样式*/
+		body,p,h2,img{padding:0; margin:0; border:0;}
+		/*所有的超链接转换为块元素*/
+		a{ display:block;}
+		
+		.all{
+			width:1200px;
+			height:900px;
+			margin:20px auto;
+			border-radius: 10px;
+			background: url(img/huaxue_bg.jpg) no-repeat;
+			box-shadow: 2px 3px 3px 2px gray;
+		}
+		.left{
+	width:800px;
+	height:980px;
+	background:url(img/jilinzhengqu.png) no-repeat 50px top ;
+	float:left;
+	position:relative;      /*将父元素设置为相对定位*/
+}
+		.one{
+	        width:150px;
+			height:62px;
+			background:url(img/position.png) no-repeat;
+			position:absolute;   /*将子元素设置为绝对定位*/
+			left:340px;
+			top:350px;
+		}
+		.two{
+			width:150px;
+			height:62px;
+			background:url(img/position.png) no-repeat;
+			position:absolute;   /*将子元素设置为绝对定位*/
+			left:350px;
+			top:400px;
+		
+		}
+		.three{
+			width:150px;
+			height:62px;
+			background:url(img/position.png) no-repeat;
+			position:absolute;   /*将子元素设置为绝对定位*/
+			left:290px;
+			top:340px;
+		}
+		.four{
+			width:150px;
+			height:62px;
+			background:url(img/position.png) no-repeat;
+			position:absolute;  /*将子元素设置为绝对定位*/
+			left:355px;
+			top:330px;
+		}
+
+/*鼠标悬浮样式*/
+.one:hover{ background:url(img/songhua_position.png)no-repeat;}
+.two:hover{ background:url(img/beida_position.png) no-repeat;}
+.three:hover{ background:url(img/wujia_position.png) no-repeat;}
+.four:hover{ background:url(img/ming_position.png) no-repeat;}	
+
+	
+	.right{
+		width:400px;
+		height:980px;
+		padding-top:100px;
+		float:right;
+		font-style:italic;
+		font-weight:bold;
+	
+	}
+	.right h2{
+		font-size:88px;
+		color:#ffffff;
+		text-shadow: 2px 2px 3px 2px gray;
+	}
+	.right .txt{
+		font-size:30px;
+		line-height: 50px;
+		color:#ffffff;
+		margin-bottom:20px;
+	}
+	img{
+		width: 500px;
+		padding-top: 150px;
+		margin-left: -100px;
+		
+	}
+	.footer{
+		
+		text-align: center;
+		color: black;
+	}
+
+	</style>
+	</head>
+	<body>
+	<div class="all">
+		<div class="left">
+	    	<a href="#" class="one"></a>
+	        <a href="#" class="two"></a>
+	        <a href="#" class="three"></a>
+	        <a href="#" class="four"></a>
+			
+	    </div>
+	    <div class="right">
+	    	<h2>冰雪丝路</h2><br>
+	        <p class="txt">吉林乡村滑雪，享受冰雪浪漫</p>
+	        <img src="img/huaxue.png"  >
+			
+	    </div>
+		
+	</div>
+	</body>
+</html>

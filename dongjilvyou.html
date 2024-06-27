@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>吉林乡村冬季旅游</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+
+    header {
+      background-color: skyblue;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      height: 100px;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav {
+      background-color: #333;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      display: flex;
+      padding: 20px;
+    }
+
+    section {
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+  .left-column {
+      flex: 1;
+    }
+
+  .middle-column {
+      flex: 1;
+    }
+
+  .right-column {
+      flex: 1;
+    }
+
+    h2 {
+      color: #4CAF50;
+      margin-top: 0;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: skyblue;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+ .container {
+      position: relative;
+      overflow: hidden;
+    }
+
+  .hot-spot-section img {
+      width: 100%;
+      opacity: 0.8; /* 图片半透明 */
+    }
+
+  .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+ .container:hover.overlay {
+      opacity: 1;
+    }
+
+ .text {
+      text-align: center;
+      font-size: 1.2em;
+      z-index: 1;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      position: sticky;
+      bottom: 0;
+      width: 100%;
+      z-index: 1;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>吉林乡村冬季旅游</h1>
+  </header>
+
+  <main>
+    <section class="left-column hot-spot-section">
+      <h2>热门景点</h2>
+      <ul>
+        <li>
+          <div class="container">
+            <img src="img/dj1.webp.jpg" alt="景点 1">
+            <div class="overlay">
+              <div class="text">“一江寒水清 两岸琼花凝”的中国四大自然奇观——雾凇，为您营造童话般的银色王国</div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="container">
+            <img src="img/dj2.jpg" alt="景点 2">
+            <div class="overlay">
+              <div class="text">实用滑雪是将滑雪升华为在特定的环境条件下，运用比赛的功能，达到竞赛的目的</div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="container">
+            <img src="img/dj3.webp.jpg" alt="景点 3">
+            <div class="overlay">
+              <div class="text">娱乐健身（旅游）滑雪是适应现代人们生活、文化需求而发展起来的大众性滑雪</div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="middle-column">
+      <h2>特色活动</h2>
+      <select onchange="showActivity(this.value)">
+        <option value="ski_competition">滑雪比赛</option>
+        <option value="ice_sculpture_exhibition">滑冰运动</option>
+        <option value="folk_performance">民俗表演</option>
+      </select>
+      <div id="activity_content"></div>
+    </section>
+
+    <section class="right-column">
+      <h2>美食推荐</h2>
+      <ul>
+        <li>东北乱炖</li>
+        <li>粘豆包</li>
+        <li>铁锅炖鱼</li>
+      </ul>
+      <h2>住宿选择</h2>
+      <ul>
+        <li>民宿</li>
+        <li>农家乐</li>
+        <li>酒店</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 20220000602 张诗棋
+  </footer>
+
+  <script>
+      function showActivity(selectedValue) {
+        var activityContentDiv = document.getElementById('activity_content');
+        activityContentDiv.innerHTML = '';
+  
+        if (selectedValue ==='ski_competition') {
+          activityContentDiv.innerHTML = '自由式滑雪，是以滑雪板和滑雪杖为工具，在专门的滑雪场上，通过完成一系列的规定和自选动作而进行的一种雪上竞技项目。它是在高山滑雪的基础上孕育发展而成，是由空中技巧、雪上技巧和雪上芭蕾三个独立的小项组成。;'
+        } else if (selectedValue === 'ice_sculpture_exhibition') {
+          activityContentDiv.innerHTML = '滑冰 : ①体育运动项目之一。穿着冰鞋在冰上滑行。比赛分花样滑冰（做出各种姿势和花样）和速度滑冰两种。 ②泛指在冰上滑行。;'
+        } else if (selectedValue === 'folk_performance') {
+          activityContentDiv.innerHTML = '流行在吉林的秧歌，是一种舞蹈、歌唱、戏剧三者综合，以舞为主的民间艺术。从表演形式上可分为地秧歌、高跷秧歌、寸子秧歌以及抬杆、背杆、橛杆等多种表现形式。通常还把耍龙灯、舞狮子、跑旱船、推车、打霸王鞭等民间舞蹈结合在一起。;'
+
+        }
+      }
+    </script>
+</body>
+
+</html>
